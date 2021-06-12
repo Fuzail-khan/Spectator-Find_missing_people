@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Profile"
+        android:icon="@drawable/ic_person"
+        app:showAsAction="always"
+        app:cnb_textColor = "#000"
+        app:cnb_iconColor = "#000"
+        app:cnb_backgroundColor = "#fff"
+        android:id="@+id/profile_bottom"/>
+
+    <item android:title="Home"
+        android:icon="@drawable/ic_home"
+        app:showAsAction="always"
+        app:cnb_textColor = "#000"
+        app:cnb_iconColor = "#000"
+        app:cnb_backgroundColor = "#fff"
+        android:id="@+id/home_bottom"/>
+
+    <item android:title="About Us"
+        android:icon="@drawable/ic_about_us"
+        app:showAsAction="always"
+        app:cnb_textColor = "#000"
+        app:cnb_iconColor = "#000"
+        app:cnb_backgroundColor = "#fff"
+        android:id="@+id/about_bottom"/>
+
+</menu>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/txtSpectatorlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spectator"
+        android:textSize="25sp"
+        android:letterSpacing="0.5"
+        android:textColor="#385963"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imgloginboy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/spec_loginboy"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/txtSpectatorlogo"
+        android:layout_marginTop="80dp">
+    </ImageView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgloginboy"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25sp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        android:id="@+id/login_email_et"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <com.google.android.material.textfield.TextInputEditText
+            android:hint="User Email"
+            android:textSize="15sp"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:maxLength="25"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_email_et"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        app:passwordToggleEnabled="true"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        android:id="@+id/login_password_et"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <com.google.android.material.textfield.TextInputEditText
+            android:hint="Password"
+            android:textSize="15sp"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:maxLength="15"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:id="@+id/btnlogin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_below="@id/login_password_et"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="#000000"
+        android:textAllCaps="false"
+        app:strokeColor="#0E3854"
+        app:strokeWidth="1dp"
+        app:cornerRadius="10dp"
+        android:text="LOGIN"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="17sp"
+        android:padding="4dp"
+        />
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar_login"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/wet_asphalt"
+        android:layout_below="@id/btnlogin"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_marginTop="5dp"
+        android:visibility="invisible"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegister"
+        app:cornerRadius="25dp"
+        android:layout_width="147dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:text="Register"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="15sp"
+        android:letterSpacing="0.1"
+        android:layout_marginLeft="-30dp"
+        android:paddingLeft="35dp"
+        android:onClick="btnRegister"
+        android:backgroundTint="#FF7C1F" />
+
+</RelativeLayout>

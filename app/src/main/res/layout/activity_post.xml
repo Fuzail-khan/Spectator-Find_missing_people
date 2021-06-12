@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    tools:context=".PostActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:id="@+id/layoutCreatePostHeader"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:elevation="10dp"
+            android:background="@color/white" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Add Missing Person's Details"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="10dp"
+                android:letterSpacing="0.1"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.1"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/TxtUploadImageHeading"
+        android:layout_below="@id/layoutCreatePostHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:text="UPLOAD PHOTO"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto"/>
+
+        <ImageButton
+            android:id="@+id/ibPost"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:background="#0000ffff"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:layout_below="@id/TxtUploadImageHeading"
+            android:src="@drawable/ic_add_image"
+            android:padding="3dp" />
+
+    <TextView
+        android:id="@+id/txtPostName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/ibPost">
+    </TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtPostName"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/fieldPostName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etName"
+            android:hint="Name (Min. 3 Characters)"
+            android:textSize="15sp"
+            android:inputType="text"
+            android:maxLines="1"
+            android:maxLength="30"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/txtPostGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/fieldPostName">
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/radioGroupPostGender"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@id/txtPostGender"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioBtnMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text="Male"/>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioBtnFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text="Female"/>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioBtnOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text="Other"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txtPostAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/radioGroupPostGender"
+            >
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPostAge"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:id="@+id/fieldPostAge"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAge"
+                android:hint="Enter Age"
+                android:textSize="15sp"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="30"
+                android:drawableStart="@drawable/ic_age"
+                android:drawablePadding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/txtPostEyesColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eyes Color"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/fieldPostAge">
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPostEyesColor"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:id="@+id/fieldPostEyesColor"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEyesColor"
+                android:hint="Type: Brown, Blue, Hazel, Amber, Green, Gray"
+                android:textSize="15sp"
+                android:inputType="text"
+                android:maxLines="1"
+                android:maxLength="30"
+                android:drawableStart="@drawable/ic_eyes_color"
+                android:drawablePadding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txtPostSkinTone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skin Tone"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/fieldPostEyesColor">
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPostSkinTone"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:id="@+id/fieldPostSkinTone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSkinTone"
+                android:hint="Type: Black, Brown, Tan, Fair, Light"
+                android:textSize="15sp"
+                android:inputType="text"
+                android:maxLines="1"
+                android:maxLength="30"
+                android:drawableStart="@drawable/ic_skin_tone"
+                android:drawablePadding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txtPostHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Height"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/fieldPostSkinTone">
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPostHeight"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:id="@+id/fieldPostHeight"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etHeight"
+                android:hint="Enter Height in Centimetres"
+                android:textSize="15sp"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="30"
+                android:drawableStart="@drawable/ic_height"
+                android:drawablePadding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txtPostWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/fieldPostHeight">
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPostWeight"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:id="@+id/fieldPostWeight"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etWeight"
+                android:hint="Enter Weight in Kilograms"
+                android:textSize="15sp"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="30"
+                android:drawableStart="@drawable/ic_weight"
+                android:drawablePadding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txtPostMissingSince"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Missing Since"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/fieldPostWeight">
+        </TextView>
+
+        <DatePicker
+            android:id="@+id/datePickerMissingSince"
+            android:layout_below="@id/txtPostMissingSince"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"
+            android:spinnersShown="true"/>
+
+
+        <TextView
+            android:id="@+id/txtPostNationality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nationality"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/datePickerMissingSince">
+        </TextView>
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/countryPicker"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:padding="5dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/border_countrypicker"
+            android:layout_below="@id/txtPostNationality"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_textGravity="CENTER"
+            app:ccp_defaultNameCode="IN"
+            app:ccp_showFlag="true"
+            app:ccp_showPhoneCode="false"
+            app:ccp_showNameCode="true"
+            app:ccp_showFullName="true"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPost"
+            app:cornerRadius="25dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/countryPicker"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#ffffff"
+            android:textAllCaps="false"
+            android:text="Post"
+            android:letterSpacing="0.3"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="18sp"
+            android:padding="4dp"
+            android:backgroundTint="@color/green"
+            />
+
+
+        <ProgressBar
+            android:id="@+id/pbPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnPost"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+
+</ScrollView>

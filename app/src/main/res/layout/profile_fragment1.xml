@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_container"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/round_back">
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/profile_pic_layout"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            app:cardPreventCornerOverlap="false"
+            app:cardCornerRadius="60dp"
+            android:id="@+id/profile_picIv"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:cardElevation="10dp"
+            android:background="@color/wet_asphalt">
+
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_person"
+                android:visibility="visible"
+                android:clickable="true"
+                android:scaleType="centerCrop"
+                android:focusable="true" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:padding="2dp"
+        android:layout_below="@id/profile_pic_layout">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:maxLines="1"
+            android:textAllCaps="false"
+            android:text="Fuzail Khan"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:letterSpacing="0.1"
+            android:fontFamily="@font/roboto_bold"/>
+
+
+        <TextView
+            android:id="@+id/tv_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:drawableStart="@drawable/ic_location"
+            android:drawablePadding="20dp"
+            android:padding="10dp"
+            android:text="Country"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="15sp" />
+
+
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_country"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:drawableStart="@drawable/ic_gender"
+            android:fontFamily="@font/roboto_medium"
+            android:drawablePadding="20dp"
+            android:padding="10dp"
+            android:text="Gender"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_gender"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:drawableStart="@drawable/ic_age"
+            android:fontFamily="@font/roboto_medium"
+            android:drawablePadding="20dp"
+            android:padding="10dp"
+            android:text="Age"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_age"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:drawableStart="@drawable/ic_email"
+            android:fontFamily="@font/roboto_medium"
+            android:drawablePadding="20dp"
+            android:padding="10dp"
+            android:text="Email Address"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_below="@id/tv_email"
+            android:id="@+id/mypostsBtn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="My Posts"
+            app:strokeColor="#0E3854"
+            app:strokeWidth="1dp"
+            app:cornerRadius="10dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="4dp">
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:id="@+id/logoutBtn"
+            android:layout_below="@id/tv_email"
+            android:layout_toRightOf="@id/mypostsBtn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="LogOut"
+            android:onClick="logOut"
+            app:strokeColor="#0E3854"
+            app:strokeWidth="1dp"
+            app:cornerRadius="10dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="4dp">
+        </com.google.android.material.button.MaterialButton>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar_profile"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/wet_asphalt"
+        android:layout_alignParentTop="true"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_marginTop="5dp"
+        android:visibility="invisible"/>
+
+
+</RelativeLayout>

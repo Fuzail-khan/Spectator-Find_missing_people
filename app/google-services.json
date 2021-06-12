@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "672248234924",
+    "project_id": "spectator-find-missing-people",
+    "storage_bucket": "spectator-find-missing-people.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672248234924:android:c2a76d643d7d18c302f009",
+        "android_client_info": {
+          "package_name": "com.fuzailkhan.spectator_findmissingpeople"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "672248234924-e5cmean1721li0tb7eelu1t6uuprg3dq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8WJ6zAqoUcMX5_DNVwN0Z_05-rsouano"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "672248234924-e5cmean1721li0tb7eelu1t6uuprg3dq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

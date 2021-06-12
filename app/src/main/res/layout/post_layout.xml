@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="5dp"
+    app:cardBackgroundColor="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/layout_allcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/userAvatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                app:cardPreventCornerOverlap="false"
+                app:cardCornerRadius="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_profile_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_person"
+                    android:visibility="visible"
+                    android:clickable="true"
+                    android:scaleType="centerCrop"
+                    android:focusable="true">
+                </ImageView>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_toRightOf="@id/userAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:hint="Name"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="15sp"
+                    android:id="@+id/tv_name_post"
+                    android:paddingStart="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#737272"
+                    android:hint="Time"
+                    android:textSize="12sp"
+                    android:id="@+id/tv_time_post"
+                    android:paddingStart="5dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/black"
+                android:padding="7dp"
+                android:background="@drawable/border_countrypicker"
+                android:drawableEnd="@drawable/ic_view"
+                android:textSize="12sp"
+                android:id="@+id/tv_views_post"
+                />
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:id="@+id/iv_post_item"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                android:transitionName="@string/transition_image"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/layout_footerBtns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="View Details"
+                android:textSize="12sp"
+                app:cornerRadius="7dp"
+                app:strokeColor="@color/light_grey"
+                android:textAllCaps="false"
+                android:id="@+id/viewButton_post"
+                android:layout_marginStart="5dp"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#0000ffff"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_toRightOf="@id/viewButton_post"
+                android:src="@drawable/ic_comment"
+                android:id="@+id/commentButton_post"
+                android:layout_marginLeft="10dp"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/moreOptionButton_post"
+                android:text="Share"
+                android:textSize="12sp"
+                app:cornerRadius="7dp"
+                app:strokeColor="@color/light_grey"
+                app:icon="@drawable/ic_share"
+                app:iconGravity="start"
+                android:textAllCaps="false"
+                android:id="@+id/shareButton_post"
+                android:layout_marginLeft="10dp"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#0000ffff"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_more_options"
+                android:id="@+id/moreOptionButton_post"
+                android:layout_marginLeft="10dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/layoutHeadCreateAccount"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:elevation="10dp"
+            android:background="@color/white" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Create Account"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="4dp"
+                android:letterSpacing="0.2"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/register_pic_layout"
+            android:layout_below="@id/layoutHeadCreateAccount"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:gravity="center"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            app:cardPreventCornerOverlap="false"
+            app:cardCornerRadius="60dp"
+            android:id="@+id/register_profile_picIv"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:cardElevation="10dp"
+            android:background="@color/wet_asphalt">
+
+            <ImageView
+                android:id="@+id/register_imgProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_person"
+                android:visibility="visible"
+                android:clickable="true"
+                android:scaleType="centerCrop"
+                android:focusable="true" />
+
+        </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txtRegister_Email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/register_pic_layout">
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtRegister_Email"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:id="@+id/register_email_et"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                android:hint="Enter Email"
+                android:textSize="15sp"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:maxLength="25"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/txtRegister_Password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/register_email_et">
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtRegister_Password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:passwordToggleEnabled="true"
+            android:id="@+id/register_password_et"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                android:hint="Password"
+                android:textSize="15sp"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:maxLength="15"
+                android:drawableStart="@drawable/ic_password"
+                android:drawablePadding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txtRegister_ConfirmPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm Password"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/register_password_et">
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/txtRegister_ConfirmPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:passwordToggleEnabled="true"
+            android:id="@+id/register_ConfirmPassword_et"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                android:hint="Confirm Password"
+                android:textSize="15sp"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:maxLength="15"
+                android:drawableStart="@drawable/ic_password"
+                android:drawablePadding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/txtRegisterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/register_ConfirmPassword_et">
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtRegisterName"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:id="@+id/Register_Name_et"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etName"
+                android:hint="Name (Min. 3 Characters)"
+                android:textSize="15sp"
+                android:inputType="text"
+                android:maxLines="1"
+                android:maxLength="30"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/txtAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select your Age"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/Register_countryPicker"
+            >
+        </TextView>
+
+        <DatePicker
+            android:id="@+id/register_datePicker"
+            android:layout_below="@id/txtAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"
+            android:spinnersShown="true"/>
+
+        <TextView
+            android:id="@+id/txtGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose your Gender"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/register_datePicker"
+            >
+        </TextView>
+
+        <RadioGroup
+            android:id="@+id/register_radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@id/txtGender"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioBtnMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text="Male"/>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioBtnFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text="Female"/>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioBtnOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text="Other"/>
+
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/Register_CountryTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select your Country"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/Register_Name_et"
+            >
+        </TextView>
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/Register_countryPicker"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/border_countrypicker"
+            android:layout_below="@id/Register_CountryTxt"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_textGravity="CENTER"
+            app:ccp_defaultNameCode="IN"
+            app:ccp_showFlag="true"
+            app:ccp_showPhoneCode="false"
+            app:ccp_showNameCode="true"
+            app:ccp_showFullName="true"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGetRegister"
+            app:cornerRadius="10dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="55dp"
+            android:layout_below="@id/register_radioGroup"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#ffffff"
+            android:textAllCaps="false"
+            android:text="Register"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="15sp"
+            android:padding="4dp"
+            android:backgroundTint="#FF7C1F"
+            />
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar_register"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/wet_asphalt"
+            android:layout_alignParentTop="true"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_marginTop="5dp"
+            android:visibility="invisible"/>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

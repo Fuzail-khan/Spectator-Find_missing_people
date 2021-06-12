@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Verify_OTP_Activity">
+
+    <TextView
+        android:id="@+id/txtCODETitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CODE"
+        android:textSize="25sp"
+        android:textColor="#385963"
+        android:fontFamily="@font/roboto_medium"
+        android:letterSpacing="0.2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtVerifyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VERIFICATION"
+        android:layout_below="@id/txtCODETitle"
+        android:textSize="25sp"
+        android:textColor="#385963"
+        android:fontFamily="@font/roboto_medium"
+        android:letterSpacing="0.2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imgOtpboy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/registration_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/txtVerifyTitle"
+        android:layout_marginTop="60dp">
+    </ImageView>
+
+
+    <com.chaos.view.PinView
+        android:id="@+id/etOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/imgOtpboy"
+        app:itemCount="6"
+        app:itemWidth="50dp"
+        app:itemHeight="50dp"
+        android:layout_centerHorizontal="true"
+        app:lineColor="#7c7c7f"
+        android:itemBackground="#f8f8ff"
+        style="@style/PinWidget.PinView"
+        android:inputType="number"
+        android:cursorVisible="true"
+        app:cursorColor="@color/black"
+        app:hideLineWhenFilled="true"
+        app:itemRadius="5dp"/>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnVerifyCode"
+        app:cornerRadius="25dp"
+        android:layout_width="190dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/etOtp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff"
+        android:textAllCaps="false"
+        android:text="Verify Code"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="19sp"
+        android:padding="2dp"
+        android:onClick="callNextScreenFromOtp"
+        android:backgroundTint="@color/green"
+        />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"/>
+
+
+</RelativeLayout>

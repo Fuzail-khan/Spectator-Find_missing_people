@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".viewMissPersonDetail">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:id="@+id/layoutViewMissPersonHeader"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:elevation="10dp"
+            android:background="@color/white" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Missing Person's Details"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="4dp"
+                android:paddingTop="10dp"
+                android:letterSpacing="0.2"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+        </RelativeLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_below="@id/layoutViewMissPersonHeader"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            app:cardPreventCornerOverlap="false"
+            app:cardCornerRadius="10dp"
+            android:id="@+id/viewMissPersonDetailPicLayout"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:cardElevation="5dp"
+            android:background="@color/wet_asphalt">
+
+            <ImageView
+                android:id="@+id/imgViewMissPeopleProfilePic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_person"
+                android:visibility="visible"
+                android:clickable="true"
+                android:transitionName="@string/transition_image"
+                android:scaleType="centerCrop"
+                android:focusable="true" />
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:padding="2dp"
+            android:layout_below="@id/viewMissPersonDetailPicLayout">
+
+            <TextView
+                android:id="@+id/tv_MissingPersonName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:maxLines="1"
+                android:letterSpacing="0.1"
+                android:textAllCaps="false"
+                android:text="Person's Name"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:fontFamily="@font/roboto_bold"/>
+
+            <LinearLayout
+                android:id="@+id/layout_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp"
+                android:padding="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tv_gender"
+                    android:layout_below="@id/tv_MissingPersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableStart="@drawable/ic_gender"
+                    android:fontFamily="@font/roboto_medium"
+                    android:drawablePadding="20dp"
+                    android:text="Gender"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_genderdata"
+                    android:layout_below="@id/tv_MissingPersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:drawablePadding="20dp"
+                    android:text="Male"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_above="@id/layout_age"
+                android:background="@color/light_grey" />
+
+            <LinearLayout
+                android:id="@+id/layout_age"
+                android:layout_below="@id/layout_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tv_age"
+                    android:layout_below="@id/tv_MissingPersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableStart="@drawable/ic_age"
+                    android:fontFamily="@font/roboto_medium"
+                    android:drawablePadding="20dp"
+                    android:text="Age"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_agedata"
+                    android:layout_below="@id/tv_MissingPersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:drawablePadding="20dp"
+                    android:text="19/4/2021"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_above="@id/layout_Height"
+                android:background="@color/light_grey"></View>
+            <LinearLayout
+                android:id="@+id/layout_Height"
+                android:layout_below="@id/layout_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tv_height"
+                    android:layout_below="@id/tv_MissingPersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableStart="@drawable/ic_height"
+                    android:fontFamily="@font/roboto_medium"
+                    android:drawablePadding="20dp"
+                    android:text="Height"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_heightdata"
+                    android:layout_below="@id/tv_MissingPersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:drawablePadding="20dp"
+                    android:text="165 cm"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_above="@id/layout_weight"
+                android:background="@color/light_grey"></View>
+            <LinearLayout
+                android:id="@+id/layout_weight"
+                android:layout_below="@id/layout_Height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tv_weight"
+                    android:layout_below="@id/tv_MissingPersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableStart="@drawable/ic_weight"
+                    android:fontFamily="@font/roboto_medium"
+                    android:drawablePadding="20dp"
+                    android:text="Weight"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_weightdata"
+                    android:layout_below="@id/tv_MissingPersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:drawablePadding="20dp"
+                    android:text="55 kg"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_above="@id/layout_eyesColor"
+                android:background="@color/light_grey"></View>
+            <LinearLayout
+                android:id="@+id/layout_eyesColor"
+                android:layout_below="@id/layout_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:padding="3dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tv_eyesColor"
+                    android:layout_below="@id/tv_MissingPersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableStart="@drawable/ic_eyes_color"
+                    android:fontFamily="@font/roboto_medium"
+                    android:drawablePadding="20dp"
+                    android:text="Eyes Color"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_eyesColordata"
+                    android:layout_below="@id/tv_MissingPersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:drawablePadding="20dp"
+                    android:text="Blue"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_above="@id/layout_skinTone"
+                android:background="@color/light_grey"></View>
+
+            <LinearLayout
+                android:id="@+id/layout_skinTone"
+                android:layout_below="@id/layout_eyesColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tv_skinTone"
+                    android:layout_below="@id/tv_MissingPersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableStart="@drawable/ic_skin_tone"
+                    android:fontFamily="@font/roboto_medium"
+                    android:drawablePadding="20dp"
+                    android:text="Skin Tone"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_SkinTonedata"
+                    android:layout_below="@id/tv_MissingPersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:drawablePadding="20dp"
+                    android:text="Fair"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_above="@id/layout_country"
+                android:background="@color/light_grey"></View>
+            <LinearLayout
+                android:id="@+id/layout_country"
+                android:layout_below="@id/layout_skinTone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tv_country"
+                    android:layout_below="@id/tv_MissingPersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableStart="@drawable/ic_location"
+                    android:fontFamily="@font/roboto_medium"
+                    android:drawablePadding="20dp"
+                    android:text="Country"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_nationalitydata"
+                    android:layout_below="@id/tv_MissingPersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:drawablePadding="20dp"
+                    android:text="India"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_above="@id/layout_missingSince"
+                android:background="@color/light_grey"></View>
+            <LinearLayout
+                android:id="@+id/layout_missingSince"
+                android:layout_below="@id/layout_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tv_missingSince"
+                    android:layout_below="@id/tv_MissingPersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableStart="@drawable/ic_age"
+                    android:fontFamily="@font/roboto_medium"
+                    android:drawablePadding="20dp"
+                    android:text="Missing Since"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_missingSincedata"
+                    android:layout_below="@id/tv_MissingPersonName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:drawablePadding="20dp"
+                    android:text="01/01/2021"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
